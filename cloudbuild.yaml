@@ -21,12 +21,6 @@ steps:
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
   secretEnv: ['CREDS', 'SSH']
-availableSecrets:
-  secretManager:
-  - versionName: projects/739290001892/secrets/project_creds
-    env: 'CREDS'
-  - versionName: projects/739290001892/secrets/compute_ssh_key
-    env: 'SSH'
   args: 
   - '-c'
   - | 
