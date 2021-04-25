@@ -36,6 +36,7 @@ steps:
   args: 
   - '-c'
   - | 
+      mv project_creds.json modules
       cd modules/
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
