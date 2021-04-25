@@ -28,6 +28,8 @@ steps:
   args: 
   - '-c'
   - |
+      pwd
+      ls
       terraform init
 # [END tf-init]
 
