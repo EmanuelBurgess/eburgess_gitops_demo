@@ -9,7 +9,7 @@ script_loc = "/ssh/mannygcpkey.pub"
 
 b_script = "apachebootstrap.sh"
 
-project_name = "crafty-plateau-305800"
+project_name = "mannyburgessdemo"
 
 
 network = "default"
