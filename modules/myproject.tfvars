@@ -1,10 +1,10 @@
-creds = "mannyburgessdemo-0f356d4696da.json"
+creds = "projects/739290001892/secrets/project_creds"
 
 
 fw_name = "eburgesstest"
 
 
-script_loc = "mannygcpkey.pub"
+script_loc = "projects/739290001892/secrets/compute_ssh_key"
 
 
 b_script = "apachebootstrap.sh"
