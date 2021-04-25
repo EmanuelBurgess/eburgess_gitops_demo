@@ -31,8 +31,8 @@ steps:
   - '-c'
   - |
       pwd
-      ls
       cd modules/
+      ls
       terraform init
 # [END tf-init]
 
@@ -44,6 +44,7 @@ steps:
   - '-c'
   - | 
       cd modules/
+      ls
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
