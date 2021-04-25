@@ -50,5 +50,6 @@ steps:
   args: 
   - '-c'
   - | 
+      cd modules/
       terraform apply -var-file=myproject.tfvars
 # [END tf-apply]      
