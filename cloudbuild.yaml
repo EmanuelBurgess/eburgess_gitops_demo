@@ -43,7 +43,7 @@ steps:
 # [END tf-plan]
 
 # [START tf-destroy]
-- id: 'tf plan'
+- id: 'tf destory'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
   args: 
