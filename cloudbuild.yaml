@@ -20,7 +20,6 @@ steps:
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
-  secretEnv: ['CREDS', 'SSH']
   args: 
   - '-c'
   - | 
