@@ -52,5 +52,5 @@ steps:
   - '-c'
   - | 
       cd modules/
-      terraform apply -var-file=myproject.tfvars
+      terraform apply --auto-approve -var-file=myproject.tfvars
 # [END tf-apply]      

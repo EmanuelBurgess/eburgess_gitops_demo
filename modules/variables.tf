@@ -72,13 +72,3 @@ variable "creds" {
   type        = string
   description = "firewall anme"
 }
-
-variable "bucket" {
-  type        = string
-  description = "bucket name"
-}
-
-variable "state_path" {
-  type        = string
-  description = "path to state file"
-}
