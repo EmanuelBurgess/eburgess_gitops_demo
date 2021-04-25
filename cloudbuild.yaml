@@ -42,6 +42,17 @@ steps:
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
+# [START tf-destroy]
+- id: 'tf plan'
+  name: 'hashicorp/terraform:0.13.6'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      cd modules/
+      terraform destroy -var-file=myproject.tfvars
+# [END tf-destory]
+
 # [START tf-apply]
 - id: 'tf apply'
   name: 'hashicorp/terraform:0.13.6'
