@@ -27,8 +27,8 @@ steps:
       gcloud secrets versions access latest --secret=project_creds > project_creds.json
       mv project_creds.json modules
       pwd
-      ls
       cd modules/
+      ls
 # [END get-creds]
 
 # [START tf-plan]
