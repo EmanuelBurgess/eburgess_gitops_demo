@@ -19,7 +19,7 @@ steps:
 
 # [START get-creds]
 - id: 'get-creds'
-  name: 'alpine'
+  name: 'google/cloud-sdk'
   entrypoint: 'sh'
   args: 
   - '-c'
