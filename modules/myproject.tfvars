@@ -1,7 +1,7 @@
 creds = "project_creds.json"
 
 
-fw_name = "eburgesstest"
+fw_name = "eburgesstestfw"
 
 
 script_loc = "projects/739290001892/secrets/compute_ssh_key"
@@ -17,7 +17,7 @@ network = "default"
 image = "ubuntu-minimal-1804-bionic-v20210223"
 
 
-c_name2 = "eburgesswebserver2022"
+c_name2 = "eburgessserver1"
 
 
 region = "us-east1"
@@ -35,7 +35,7 @@ http = 80
 https = 443
 
 
-ig_name = "eburgessinstancegroup"
+ig_name = "eburgessinstancegroupa"
 
 
-c_name = "eburgess2021"
+c_name = "eburgessserver2"
