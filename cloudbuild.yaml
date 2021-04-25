@@ -38,6 +38,7 @@ steps:
   - '-c'
   - | 
       pwd
+      ls
 # [END tf-plan]
 
 # [START tf-apply]
