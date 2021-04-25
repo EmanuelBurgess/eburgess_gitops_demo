@@ -39,7 +39,6 @@ steps:
   - | 
       pwd
       ls
-      cd modules/
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
