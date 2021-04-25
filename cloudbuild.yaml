@@ -17,6 +17,8 @@ steps:
   - '-c'
   - | 
       gcloud secrets versions access latest --secret=project_creds > project_creds.json
+      mv project_creds.json modules/
+      cd modules/
       pwd
       ls
 # [END get-creds]
@@ -30,6 +32,7 @@ steps:
   - |
       pwd
       ls
+      cd modules/
       terraform init
 # [END tf-init]
 
