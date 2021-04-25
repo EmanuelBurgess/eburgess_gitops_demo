@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "/Users/cadillacburgess/Downloads/mannyburgessdemo-0f356d4696da.json"
+  credentials = var.creds
   project     = var.project_name
   region      = var.region
   zone        = var.zone
