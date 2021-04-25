@@ -38,6 +38,7 @@ steps:
   - | 
       pwd
       ls
+      cat project_creds.json
       cd modules/
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
