@@ -1,10 +1,10 @@
-creds = "/Users/cadillacburgess/Downloads/mannyburgessdemo-0f356d4696da.json"
+creds = "mannyburgessdemo-0f356d4696da.json"
 
 
 fw_name = "eburgesstest"
 
 
-script_loc = "/ssh/mannygcpkey.pub"
+script_loc = "mannygcpkey.pub"
 
 
 b_script = "apachebootstrap.sh"
