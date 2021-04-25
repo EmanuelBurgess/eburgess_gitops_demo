@@ -30,16 +30,16 @@ steps:
 # [END get-creds]
 
 # [START tf-plan]
-#- id: 'tf plan'
-#  name: 'hashicorp/terraform:0.13.6'
-#  entrypoint: 'sh'
-#  args: 
-#  - '-c'
-#  - | 
-#      pwd
-#      ls
-#      cd modules/
-#      terraform plan -var-file=myproject.tfvars
+- id: 'tf plan'
+  name: 'hashicorp/terraform:0.13.6'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      pwd
+      ls
+      cd modules/
+      terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
 # [START tf-apply]
