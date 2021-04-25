@@ -17,9 +17,9 @@ resource "google_compute_instance" "mannycompute1" {
     }
   }
 
-  metadata = {
-    ssh-keys = "emanuelburgess:${file(var.script_loc)}"
-  }
+  #metadata = {
+  #  ssh-keys = "emanuelburgess:${file(var.script_loc)}"
+  #}
 
   metadata_startup_script = "${file(var.b_script)}"
 }
@@ -43,9 +43,9 @@ resource "google_compute_instance" "mannycompute2" {
     }
   }
 
-  metadata = {
-    ssh-keys = "emanuelburgess:${file(var.script_loc)}"
-  }
+  #metadata = {
+  #  ssh-keys = "emanuelburgess:${file(var.script_loc)}"
+  #}
 
   metadata_startup_script = "${file(var.b_script)}"
 }
