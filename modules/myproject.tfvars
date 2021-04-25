@@ -41,5 +41,3 @@ ig_name = "eburgessinstancegroup"
 c_name = "eburgess2021"
 
 bucket = "eburgesstestbucket"
-
-state_path = "terraform/state"
