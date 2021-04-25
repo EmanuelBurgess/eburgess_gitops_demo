@@ -20,7 +20,7 @@ steps:
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
-    secretEnv: ['CREDS', 'SSH']
+  secretEnv: ['CREDS', 'SSH']
 availableSecrets:
   secretManager:
   - versionName: projects/739290001892/secrets/project_creds
