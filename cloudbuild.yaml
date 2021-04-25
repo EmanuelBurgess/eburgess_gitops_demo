@@ -18,7 +18,7 @@ steps:
       terraform init
 
 # [START get-creds]
-- id: 'tf plan'
+- id: 'get-creds'
   name: 'alpine'
   entrypoint: 'sh'
   args: 
