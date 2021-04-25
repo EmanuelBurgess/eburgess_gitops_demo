@@ -1,4 +1,4 @@
-creds = "/workspace/project_creds.json"
+creds = "project_creds.json"
 
 
 fw_name = "eburgesstest"
