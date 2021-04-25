@@ -50,7 +50,7 @@ steps:
   - '-c'
   - | 
       cd modules/
-      terraform destroy -var-file=myproject.tfvars
+      terraform destroy --auto-approve -var-file=myproject.tfvars
 # [END tf-destory]
 
 # [START tf-apply]
