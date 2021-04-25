@@ -1,6 +1,6 @@
 # variables #
 ###################
-*.tfvars
+#*.tfvars
 
 # state #
 *.tfstate
