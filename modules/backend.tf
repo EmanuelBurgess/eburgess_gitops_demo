@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "eburgesstestbucket"
-    prefix  = "terraform/state"
+    bucket = "eburgesstestbucket100"
+    prefix = "terraform/"
     #credentials = "modules/project_creds.json"
   }
 }
