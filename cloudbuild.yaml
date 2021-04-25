@@ -39,6 +39,8 @@ steps:
       pwd
       ls
       cd /workspace
+      echo "new test"
+      ls
       cat project_creds.json
       #cd modules/
       #terraform plan -var-file=myproject.tfvars
