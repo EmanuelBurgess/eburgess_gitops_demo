@@ -38,9 +38,10 @@ steps:
   - | 
       pwd
       ls
-      cat /workspace/project_creds.json
-      cd modules/
-      terraform plan -var-file=myproject.tfvars
+      cd /workspace
+      cat project_creds.json
+      #cd modules/
+      #terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
 # [START tf-apply]
