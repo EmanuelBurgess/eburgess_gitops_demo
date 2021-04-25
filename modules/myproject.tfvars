@@ -4,7 +4,7 @@ creds = "/Users/cadillacburgess/Downloads/mannyburgessdemo-0f356d4696da.json"
 fw_name = "eburgesstest"
 
 
-script_loc = "/Users/cadillacburgess/.ssh/mannygcpkey.pub"
+script_loc = "/ssh/mannygcpkey.pub"
 
 
 b_script = "apachebootstrap.sh"
