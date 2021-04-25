@@ -38,6 +38,7 @@ steps:
   - | 
       mv project_creds.json modules
       cd modules/
+      ls
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
