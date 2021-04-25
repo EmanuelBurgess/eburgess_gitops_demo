@@ -65,10 +65,10 @@ variable "script_loc" {
 
 variable "fw_name" {
   type        = string
-  description = "firewall anme"
+  description = "firewall name"
 }
 
 variable "creds" {
   type        = string
-  description = "firewall anme"
+  description = "credentials name"
 }
