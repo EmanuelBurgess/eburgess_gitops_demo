@@ -31,7 +31,7 @@ steps:
 
 # [START tf-plan]
 - id: 'tf plan'
-  name: 'ubuntu'
+  name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
   args: 
   - '-c'
