@@ -24,7 +24,7 @@ steps:
   args: 
   - '-c'
   - | 
-      gcloud secrets versions access latest --secret=project_creds >> project_creds.json
+      gcloud secrets versions access latest --secret=project_creds > project_creds.json
       pwd
       ls
 # [END get-creds]
@@ -39,6 +39,8 @@ steps:
       pwd
       ls
       cat project_creds.json
+      cd modules/
+      terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
 # [START tf-apply]
