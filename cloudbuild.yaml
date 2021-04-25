@@ -42,6 +42,7 @@ steps:
       echo "new test"
       ls
       cat project_creds.json
+      export creds=$(cat project_creds.json)
       env
       #cd modules/
       #terraform plan -var-file=myproject.tfvars
