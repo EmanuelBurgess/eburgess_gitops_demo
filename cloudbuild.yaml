@@ -8,7 +8,7 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
-      if [ $BRANCH_NAME != "dev" ]
+      if [ $BRANCH_NAME == "dev" ]
       then
       echo "you are on the dev branch"
       else
@@ -24,7 +24,7 @@ steps:
   - | 
       gcloud secrets versions access latest --secret=project_creds > project_creds.json
       mv project_creds.json modules/
-      env
+      echo $BRANCH_NAME
       cd modules/
 # [END get-creds]
 
@@ -37,7 +37,7 @@ steps:
   - '-c'
   - |
       terraform init
-      env
+      echo $BRANCH_NAME
 # [END tf-init]
 
 # [START tf-fmt]
@@ -50,7 +50,7 @@ steps:
   - |
       echo "Terraform format"
       terraform fmt
-      env
+      echo $BRANCH_NAME
 # [END tf-fmt]
 
 # [START tf-validate]
