@@ -24,7 +24,7 @@ steps:
 # [START tf-init]
 - id: 'tf init'
   name: 'hashicorp/terraform:light'
-  entrypoint: 'sh'
+  entrypoint: 
   args: 
   - '-c'
   - |
