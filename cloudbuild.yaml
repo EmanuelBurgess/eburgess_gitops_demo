@@ -19,8 +19,6 @@ steps:
       gcloud secrets versions access latest --secret=project_creds > project_creds.json
       mv project_creds.json modules/
       cd modules/
-      pwd
-      ls
 # [END get-creds]
 
 # [START tf-init]
@@ -30,11 +28,21 @@ steps:
   args: 
   - '-c'
   - |
-      pwd
       cd modules/
-      ls
       terraform init
 # [END tf-init]
+
+# [START tf-fmt]
+- id: 'tf fmt'
+  name: 'hashicorp/terraform:0.13.6'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - |
+      cd modules/
+      echo "Terraform format"
+      terraform fmt
+# [END tf-fmt]
 
 # [START tf-plan]
 - id: 'tf plan'
