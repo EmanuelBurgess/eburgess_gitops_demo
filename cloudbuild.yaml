@@ -10,9 +10,9 @@ steps:
       echo "***********************"
       if [ $BRANCH_NAME == "dev" ]
       then
-      echo "you are on the dev branch"
+      echo "you are on the dev branch and will build your infrastructure in the dev workspace"
       else
-      echo "you are on a different branch"
+      echo "you are on a different branch and will build your infrastructure in the default workspace"
       fi
 
 # [START get-creds]
@@ -70,8 +70,12 @@ steps:
   args: 
   - '-c'
   - | 
-      ls
-      terraform workspace new dev
+      if [ $BRANCH_NAME == "dev" ]
+      then
+      terraform workspace select dev
+      else
+      terraform workspace select default
+      fi
       terraform workspace list
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
