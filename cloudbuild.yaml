@@ -25,10 +25,10 @@ steps:
 - id: 'tf init'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
+  dir: 'modules/'
   args: 
   - '-c'
   - |
-      cd modules/
       terraform init
 # [END tf-init]
 
@@ -48,11 +48,11 @@ steps:
 - id: 'tf validate'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
+  dir: 'modules/'
   args: 
   - '-c'
   - |
-      cd modules/
-      echo "Terraform validate
+      echo "Terraform validate"
       terraform validate
 # [END tf-validate]
 
@@ -60,10 +60,10 @@ steps:
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
+  dir: 'modules/'
   args: 
   - '-c'
   - | 
-      cd modules/
       ls
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
@@ -72,10 +72,10 @@ steps:
 - id: 'tf destory'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
+  dir: 'modules/'
   args: 
   - '-c'
   - | 
-      cd modules/
       terraform destroy --auto-approve -var-file=myproject.tfvars
 # [END tf-destory]
 
@@ -83,9 +83,9 @@ steps:
 - id: 'tf apply'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
+  dir: 'modules/'
   args: 
   - '-c'
   - | 
-      cd modules/
       terraform apply --auto-approve -var-file=myproject.tfvars
 # [END tf-apply]      
