@@ -28,6 +28,8 @@ steps:
   args: 
   - '-c'
   - |
+      pwd
+      ls
       cd modules/
       docker run -i -t hashicorp/terraform:light init
 # [END tf-init]
