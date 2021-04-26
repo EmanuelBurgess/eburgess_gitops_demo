@@ -8,6 +8,12 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
+      if [ $BRANCH_NAME != "dev" ]
+      then
+      echo "you are on the dev branch"
+      else
+      echo "you are on a different branch"
+      fi
 
 # [START get-creds]
 - id: 'get-creds'
@@ -18,6 +24,7 @@ steps:
   - | 
       gcloud secrets versions access latest --secret=project_creds > project_creds.json
       mv project_creds.json modules/
+      env
       cd modules/
 # [END get-creds]
 
@@ -30,6 +37,7 @@ steps:
   - '-c'
   - |
       terraform init
+      env
 # [END tf-init]
 
 # [START tf-fmt]
@@ -42,6 +50,7 @@ steps:
   - |
       echo "Terraform format"
       terraform fmt
+      env
 # [END tf-fmt]
 
 # [START tf-validate]
