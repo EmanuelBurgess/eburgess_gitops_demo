@@ -10,9 +10,13 @@ steps:
       echo "***********************"
       if [ $BRANCH_NAME == "dev" ]
       then
+      echo "***********************"
       echo "you are on the dev branch and will build your infrastructure in the dev workspace"
+      echo "***********************"
       else
+      echo "***********************"
       echo "you are on a different branch and will build your infrastructure in the default workspace"
+      echo "***********************"
       fi
 
 # [START get-creds]
