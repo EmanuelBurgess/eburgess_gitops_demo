@@ -23,25 +23,23 @@ steps:
 
 # [START tf-init]
 - id: 'tf init'
-  name: 'hashicorp/terraform:light'
-  entrypoint: 
-  args: 
-  - '-c'
-  - |
-      pwd
-      ls
-      cd modules/
-      docker run -i -t hashicorp/terraform:light init
-# [END tf-init]
-
-# [START tf-fmt]
-- id: 'tf fmt'
   name: 'hashicorp/terraform:0.13.6'
   entrypoint: 'sh'
   args: 
   - '-c'
   - |
       cd modules/
+      terraform init
+# [END tf-init]
+
+# [START tf-fmt]
+- id: 'tf fmt'
+  name: 'hashicorp/terraform:0.13.6'
+  entrypoint: 'sh'
+  dir: 'modules/'
+  args: 
+  - '-c'
+  - |
       echo "Terraform format"
       terraform fmt
 # [END tf-fmt]
@@ -54,7 +52,7 @@ steps:
   - '-c'
   - |
       cd modules/
-      echo "Terraform validate"
+      echo "Terraform validate
       terraform validate
 # [END tf-validate]
 
