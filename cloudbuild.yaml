@@ -24,7 +24,6 @@ steps:
   - | 
       gcloud secrets versions access latest --secret=project_creds > project_creds.json
       mv project_creds.json modules/
-      echo $BRANCH_NAME
       cd modules/
 # [END get-creds]
 
@@ -37,7 +36,6 @@ steps:
   - '-c'
   - |
       terraform init
-      echo $BRANCH_NAME
 # [END tf-init]
 
 # [START tf-fmt]
@@ -50,7 +48,6 @@ steps:
   - |
       echo "Terraform format"
       terraform fmt
-      echo $BRANCH_NAME
 # [END tf-fmt]
 
 # [START tf-validate]
@@ -74,6 +71,8 @@ steps:
   - '-c'
   - | 
       ls
+      terraform workspace new dev
+      terraform workspace list
       terraform plan -var-file=myproject.tfvars
 # [END tf-plan]
 
@@ -85,6 +84,7 @@ steps:
   args: 
   - '-c'
   - | 
+      terraform workspace list
       terraform destroy --auto-approve -var-file=myproject.tfvars
 # [END tf-destory]
 
@@ -96,5 +96,6 @@ steps:
   args: 
   - '-c'
   - | 
+      terraform workspace list
       terraform apply --auto-approve -var-file=myproject.tfvars
 # [END tf-apply]      
