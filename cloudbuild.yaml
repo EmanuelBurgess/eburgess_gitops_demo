@@ -29,7 +29,7 @@ steps:
   - '-c'
   - |
       cd modules/
-      docker run -i -t hashicorp/terraform:light terraform init
+      docker run -i -t hashicorp/terraform:light init
 # [END tf-init]
 
 # [START tf-fmt]
