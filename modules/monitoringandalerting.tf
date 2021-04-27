@@ -9,8 +9,7 @@ resource "google_monitoring_alert_policy" "alert_policy" {
       comparison      = "COMPARISON_GT"
       threshold_value = 1
       aggregations {
-        alignment_period   = "60s"
-        per_series_aligner = "ALIGN_RATE"
+        alignment_period = "60s"
       }
     }
   }
