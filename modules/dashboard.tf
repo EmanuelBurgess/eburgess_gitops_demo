@@ -36,7 +36,7 @@ resource "google_monitoring_dashboard" "dashboard" {
               "timeSeriesFilter": {
                 "filter": "metric.type=\"agent.googleapis.com/cpu/utilization\"",
                 "aggregation": {
-                  "perSeriesAligner": "LINEAR"
+                  "perSeriesAligner": "ALIGN_SUM"
                 }
               },
               "unitOverride": "1"
