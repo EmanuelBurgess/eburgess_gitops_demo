@@ -47,5 +47,5 @@ resource "google_compute_instance" "mannycompute2" {
   #  ssh-keys = "emanuelburgess:${file(var.script_loc)}"
   #}
 
-  metadata_startup_script = "${file(var.b_script)}"
+  metadata_startup_script = "${file(var.b_script2)}"
 }

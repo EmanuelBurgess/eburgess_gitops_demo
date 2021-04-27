@@ -9,6 +9,8 @@ script_loc = "projects/739290001892/secrets/compute_ssh_key"
 
 b_script = "apachebootstrap.sh"
 
+b_script2 = "apachebootstrap2.sh"
+
 project_name = "mannyburgessdemo"
 
 

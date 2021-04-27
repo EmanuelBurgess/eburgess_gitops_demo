@@ -58,6 +58,11 @@ variable "b_script" {
   description = "script name"
 }
 
+variable "b_script2" {
+  type        = string
+  description = "script name"
+}
+
 variable "script_loc" {
   type        = string
   description = "script location"
