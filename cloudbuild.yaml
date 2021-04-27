@@ -52,32 +52,32 @@ steps:
 # [START tf-notify]
 - id: 'tf notify'
   name: 'cloudposse/slack-notifier'
-  entrypoint:
+  entrypoint: 'sh'
   dir: 'modules/'
   args: 
   - '-c'
   - |
-      -e SLACK_WEBHOOK_URL=$SLACK_WEBHOOK \
-      -e SLACK_USER_NAME="GCP CLOUD BUILD BOT" \
-      -e SLACK_ICON_EMOJI=":white_check_mark:" \
-      -e SLACK_FALLBACK="Deployed to Staging environment" \
-      -e SLACK_COLOR="good" \
-      -e SLACK_PRETEXT="Added XYZ to feature-104" \
-      -e SLACK_AUTHOR_NAME="Auto Deploy Robot" \
-      -e SLACK_AUTHOR_LINK="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png" \
-      -e SLACK_AUTHOR_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png" \
-      -e SLACK_TITLE="Environment Updated" \
-      -e SLACK_TITLE_LINK="http://demo1.cloudposse.com" \
-      -e SLACK_TEXT="The latest changes have been deployed" \
-      -e SLACK_THUMB_URL="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/SquareLogo2.png" \
-      -e SLACK_FOOTER="Helm Deployment" \
-      -e SLACK_FOOTER_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/kubernetes.png" \
-      -e SLACK_FIELD1_TITLE="Environment" \
-      -e SLACK_FIELD1_VALUE="Staging" \
-      -e SLACK_FIELD1_SHORT="true" \
-      -e SLACK_FIELD2_TITLE="Namespace" \
-      -e SLACK_FIELD2_VALUE="feature-104" \
-      -e SLACK_FIELD2_SHORT="true" \
+      export SLACK_WEBHOOK_URL="$SLACK_WEBHOOK" \
+      export SLACK_USER_NAME="GCP CLOUD BUILD BOT" \
+      export SLACK_ICON_EMOJI=":white_check_mark:" \
+      export SLACK_FALLBACK="Deployed to Staging environment" \
+      export SLACK_COLOR="good" \
+      export SLACK_PRETEXT="Added XYZ to feature-104" \
+      export SLACK_AUTHOR_NAME="Auto Deploy Robot" \
+      export SLACK_AUTHOR_LINK="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png" \
+      export SLACK_AUTHOR_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png" \
+      export SLACK_TITLE="Environment Updated" \
+      export SLACK_TITLE_LINK="http://demo1.cloudposse.com" \
+      export SLACK_TEXT="The latest changes have been deployed" \
+      export SLACK_THUMB_URL="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/SquareLogo2.png" \
+      export SLACK_FOOTER="Helm Deployment" \
+      export SLACK_FOOTER_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/kubernetes.png" \
+      export SLACK_FIELD1_TITLE="Environment" \
+      export SLACK_FIELD1_VALUE="Staging" \
+      export SLACK_FIELD1_SHORT="true" \
+      export SLACK_FIELD2_TITLE="Namespace" \
+      export SLACK_FIELD2_VALUE="feature-104" \
+      export SLACK_FIELD2_SHORT="true" \
       slack-notifier
       env
 # [END tf-notify]
