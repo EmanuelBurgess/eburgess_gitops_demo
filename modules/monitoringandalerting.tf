@@ -16,7 +16,7 @@ resource "google_monitoring_alert_policy" "alert_policy" {
   }
 
   user_labels = {
-    name = "webserver demo"
+    name = "webserver_demo"
   }
 }
 
