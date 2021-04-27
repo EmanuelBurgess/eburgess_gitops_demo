@@ -125,15 +125,3 @@ steps:
       terraform workspace list
       terraform apply --auto-approve -var-file=myproject.tfvars
 # [END tf-apply]      
-
-# [START tf-cleanup]
-- id: 'tf cleanup'
-  name: 'hashicorp/terraform:0.13.6'
-  entrypoint: 'sh'
-  dir: 'modules/'
-  args: 
-  - '-c'
-  - | 
-      terraform workspace list
-      terraform destroy --auto-approve -var-file=myproject.tfvars
-# [END tf-cleanup]
