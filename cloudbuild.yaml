@@ -49,38 +49,6 @@ steps:
       env
 # [END get-slackurl]
 
-# [START tf-notify]
-- id: 'tf notify'
-  name: 'cloudposse/slack-notifier'
-  entrypoint:
-  dir: 'modules/'
-  args: 
-  - '-c'
-  - |
-      export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/XXXXXXXX/XXXXXXXX/XXXXXXXXXXXXXXXXXXXXXX"
-      export SLACK_USER_NAME="CodeFresh"
-      export SLACK_ICON_EMOJI=":white_check_mark:"
-      export SLACK_FALLBACK="Deployed to Staging environment"
-      export SLACK_COLOR="good"
-      export SLACK_PRETEXT="Added XYZ to feature-104"
-      export SLACK_AUTHOR_NAME="Auto Deploy Robot"
-      export SLACK_AUTHOR_LINK="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png"
-      export SLACK_AUTHOR_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png"
-      export SLACK_TITLE="Environment Updated"
-      export SLACK_TITLE_LINK="http://demo1.cloudposse.com"
-      export SLACK_TEXT="The latest changes have been deployed"
-      export SLACK_THUMB_URL="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/SquareLogo2.png"
-      export SLACK_FOOTER="Helm Deployment"
-      export SLACK_FOOTER_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/kubernetes.png"
-      export SLACK_FIELD1_TITLE="Environment"
-      export SLACK_FIELD1_VALUE="Staging"
-      export SLACK_FIELD1_SHORT="true"
-      export SLACK_FIELD2_TITLE="Namespace"
-      export SLACK_FIELD2_VALUE="feature-104"
-      export SLACK_FIELD2_SHORT="true"
-      env
-# [END tf-notify]
-
 # [START tf-init]
 - id: 'tf init'
   name: 'hashicorp/terraform:0.13.6'
