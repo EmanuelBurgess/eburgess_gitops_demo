@@ -57,7 +57,7 @@ steps:
   args: 
   - '-c'
   - |
-      export SLACK_WEBHOOK_URL=$SLACK_WEBHOOK \
+      export SLACK_WEBHOOK_URL=($SLACK_WEBHOOK) \
       export SLACK_USER_NAME="GCP CLOUD BUILD BOT" \
       export SLACK_ICON_EMOJI=":white_check_mark:" \
       export SLACK_FALLBACK="Deployed to Staging environment" \
