@@ -57,7 +57,7 @@ steps:
   args: 
   - '-c'
   - |
-      -webhook_url $SLACK_WEBHOOK \
+      -webhook_url  \
       -user_name "CodeFresh" \
       -icon_emoji ":white_check_mark:" \
       -fallback "Deployed to Staging environment" \
