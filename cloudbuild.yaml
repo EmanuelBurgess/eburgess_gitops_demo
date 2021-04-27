@@ -52,7 +52,7 @@ steps:
 # [START tf-notify]
 - id: 'tf notify'
   name: 'cloudposse/slack-notifier'
-  entrypoint: 'sh'
+  entrypoint:
   dir: 'modules/'
   args: 
   - '-c'
