@@ -38,9 +38,11 @@ steps:
       if [ -f present.txt ]
       then
       export SLACK_WEBHOOK=$(gcloud secrets versions access latest --secret=slack-webhook-url)
+      echo "export of webhook variable complete"
       else
       echo "file is not found no slack url could be established"
       fi  
+      env
 # [END get-slackurl]
 
 # [START tf-init]
